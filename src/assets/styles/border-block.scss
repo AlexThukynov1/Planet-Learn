@@ -1,0 +1,153 @@
+@import "./vaiables.scss";
+
+.pl-border-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px #CDCDCD;
+    border-radius: 24px;
+    width: 475px;
+    padding: 20px 20px 20px 24px;
+    margin-top: 28px;
+    flex:1;
+    &__content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap:45px;
+    }
+    &__best-price {
+        font-family: $main-font;
+        font-size: $third-font-size;
+        color:$primary-color;
+        line-height: 1;
+        font-weight: 800;
+        margin-top: 5px;
+        span {
+            color:$second-color;
+        }
+    }
+  
+    &__after-price {
+        font-family: $main-font;
+        font-size: 20px;
+        color:$primary-color;
+        font-weight: 600;
+        line-height: 1;
+        margin-top: 13px;
+    }
+  
+    &__across-price {
+        font-family: $main-font;
+        font-size: $primary-font-size;
+        color:$fourth-color;
+        font-weight: 600;
+        line-height: 1;
+        margin-top: 7px;
+    }
+  
+    .timer-block {
+        width: 161px;
+        height: 60px;
+        border-radius: 12px;
+        background: #141414;
+        margin-top: 16px;
+        position: relative;
+        overflow: hidden;
+        &__bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 161px;
+            height: 60px;
+            border-radius: 12px;
+            background: #00CA14;
+            animation: 180s linear timer-scroll;
+            z-index: 1;
+        }
+        .timer {
+            position: relative;
+            font-family: $main-font;
+            font-size: $third-font-size;
+            color:$third-color;
+            font-weight: 600;
+            text-align: center;
+            z-index: 2;
+            line-height: 1.2;
+            padding-top: 15px;
+        }
+    }
+  
+    .benefits {
+        margin: 30px 5px 5px 35px;
+      &__item {
+        position:relative;
+        font-family: $main-font;
+        font-size: $primary-font-size;
+        line-height: 1;
+        color:$primary-color;
+        margin: 0 0 24px;
+      }
+    }
+    .benefits__item::before {
+        content: url('../media/images/star-min.png');
+        display: block;
+        position: absolute;
+        top: -4px;
+        left: -35px;
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        line-height: 0;
+    }
+  
+    .secure-payment {
+        display: flex;
+        border: solid 1px #CDCDCD;
+        border-radius: 12px;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 0px;
+        padding: 15px 10px 15px 10px;
+        width: 99.5%;
+        &__lock-image {
+            width: 24px;
+        }
+        &__text {
+            font-family: $main-font;
+            font-size: $primary-font-size;
+            color:#01C120;
+            font-weight: 600;
+        }
+    }
+  
+    .description {
+        font-family: $main-font;
+        font-size: $second-font-size;
+        color:$fifth-color;
+        text-align: center;
+        margin-top: 24px;
+        line-height: 1.2;
+    }
+  }
+.pl-border-block::after {
+    content: url(/img/asteroid-min.4b6e8d81.png);
+    display: block;
+    position: absolute;
+    top: -57px;
+    right: 171px;
+    width: 50px;
+    height: 20px;
+}
+.margin-bottom {
+    margin-bottom: 23px;
+}
+
+@keyframes timer-scroll {
+    from {
+        transform: translateX(0%);
+      }
+    
+      to {
+        transform: translateX(-100%);
+      }
+  }

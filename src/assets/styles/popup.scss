@@ -1,0 +1,247 @@
+@import './vaiables.scss';
+
+.pl-popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    .pl-popup {
+        display:flex;
+        min-width: 400px;
+        flex-direction: column;
+        background:#fff;
+        border: solid 2px #6C727F;
+        border-radius:12px;
+        padding: 24px 16px 16px;
+        align-items:center;
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center
+        }
+        &__title {
+            font-family: $main-font;
+            color:$primary-color;
+            font-size: 21px;
+            line-height: 1.2;
+            font-weight: 900;
+            margin-bottom: 25px;
+        }
+        &__paypal-btn,
+        &__g-pay-btn {
+            background: #FEC538;
+            border-radius:12px;
+            text-decoration: none;
+            color:$primary-color;
+            font-family: $main-font;
+            text-transform:uppercase;
+            font-weight: 700;
+            padding: 9px 19px;
+            width: 100%;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            margin-bottom: 16px;
+            gap: 10px;
+            img{
+                width: 50px;
+                height: 32px;
+            }
+        }
+        &__g-pay-btn{
+            border:solid 1px #E1E1E1;
+            border-radius:12px;
+            background:#ffffff;
+            img{
+                width: 24px;
+                height: 24px;  
+            }
+        }
+        &__submit-button {
+            background: #D2D2D2;
+            border-radius:12px;
+            color:$third-color;
+            font-family: $main-font;
+            font-size: $primary-font-size;
+            text-align: center;
+            line-height: 1;
+            padding: 18px;
+            border:none;
+            font-weight: 700;
+            width: 78%;
+            margin-bottom: 22px;
+        }
+        &__close-button {
+            color:$fifth-color;
+            font-family: $main-font;
+            font-size: $primary-font-size;
+            background:none;
+            border:none;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .dividers-block {
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            color:$fourth-color;
+            font-family: $main-font;
+            font-size: $second-font-size;
+            text-transform:uppercase;
+            font-weight: 600;
+            gap: 8px;
+            margin-bottom: 16px;
+            &__divider {
+                background: #E2E2E2;
+                height: 2px;
+                width: 166px;
+            }
+        }
+        .hidden-label {
+            display: none;
+            font-size: 0;
+            line-height: 0;
+            overflow: hidden;
+        }
+        .card-number-wrapper {
+            position: relative;
+            border: solid 1px #D2D5DA;
+            border-radius:8px;
+            display: inline-flex;
+            align-items:center;
+            justify-content: space-between;
+            padding: 11px 12px 11px 16px;
+            width: 100%;
+            gap: 140px;
+            margin-bottom: 30px;
+            .card-number {
+                display: block;
+                position: relative;
+                color:$fourth-color;
+                font-family: $main-font;
+                font-size: $second-font-size+2;
+                font-weight: 700;
+                line-height: 1;
+                outline: none;
+                border:none;
+            }
+            img {
+                width: 32px;
+                height: 22px;
+            }
+        }
+        .card-number-wrapper::before {
+            content: 'Card number';
+            position: absolute;
+            top: -7px;
+            left: 12px;
+            background-color: #fff;
+            color:#121826;
+            font-family: $main-font;
+            font-size: $second-font-size;
+            font-weight: 700;
+            line-height: 1;
+            padding: 0px 5px;
+        }
+        .card-values {
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 40px;
+            &__months,
+            &__years,
+            &__cvv {
+                border:none;
+                outline: none;
+                max-width: 116px;
+                font-family: $main-font;
+                font-size: $second-font-size;
+                color:$fourth-color;
+                font-weight: 700;
+                line-height: 1;
+                padding: 15px;
+                
+            }
+            &__month-select-wrapper {
+                flex:1;
+                border:solid 1px #D2D5DA;
+                border-radius:8px;
+                position: relative;                  
+            }
+            &__years-select-wrapper {
+                flex:1;
+                border:solid 1px #D2D5DA;
+                border-radius:8px;
+                position: relative;
+                               
+            }
+            &__cvv-wrapper {
+                flex:1;
+                border:solid 1px #D2D5DA;
+                border-radius:8px;
+                position: relative;
+            }
+            &__month-select-wrapper::before {
+                content: 'Month';
+                position: absolute;
+                top: -7px;
+                left: 12px;
+                background-color: #fff;
+                color:#121826;
+                font-family: $main-font;
+                font-size: $second-font-size;
+                font-weight: 700;
+                line-height: 1;
+                padding: 0px 5px;
+                                    
+            }
+            &__years-select-wrapper::before {
+                content: 'Year';
+                position: absolute;
+                top: -7px;
+                left: 12px;
+                background-color: #fff;
+                color:#121826;
+                font-family: $main-font;
+                font-size: $second-font-size;
+                font-weight: 700;
+                line-height: 1;
+                padding: 0px 5px;
+                               
+            }
+            &__cvv-wrapper::before {
+                content: 'CVC';
+                position: absolute;
+                top: -7px;
+                left: 12px;
+                background-color: #fff;
+                color:#121826;
+                font-family: $main-font;
+                font-size: $second-font-size;
+                font-weight: 700;
+                line-height: 1;
+                padding: 0px 5px;
+            }
+        }
+    }
+    .add-shadow {
+        box-shadow: 2px 15px 21px -3px #D2D2D2;
+    }
+}
+.pl-popup__paypal-btn:hover {
+    background:#FFDA80;
+    transition-duration: 0.8s;
+}
+.pl-popup__g-pay-btn:hover {
+    background:#000000;
+    color: #fff;
+    transition-duration: 0.8s;
+}

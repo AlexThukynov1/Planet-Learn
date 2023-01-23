@@ -1,0 +1,112 @@
+@import "./border-block.scss", "./content-block.scss", "./popup.scss", "./main-wrapper.scss";
+
+@media screen and (max-width: 1024px) {
+body {
+   
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+}
+#app {
+    overflow-y: scroll;
+}
+.logo{
+    margin: 10px 0 0 20px;
+    img{
+        width: 180px;
+    }
+}
+.pl-main-wrapper {
+    padding: 0 20px;
+}
+}
+@media screen and (max-width: 768px) {
+    .pl-main-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .content {
+        overflow-y: scroll;
+    }
+    .pl-border-block {
+        margin: 20px 0;
+        max-width: 100%;
+        width: 100%;
+    }
+    .pl-content-block {
+        max-width: 100%;
+        padding-top: 10px;
+    }
+    .pl-content-block__button {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 425px) {
+    .logo{
+        margin: 20px 0 0 8px;
+        img{
+            width: 180px;
+        }
+    }
+    .benefits {
+        margin: 10px 5px 5px 35px;
+    }
+    .pl-border-block__content-wrapper {
+        gap: 0;
+    }
+    .pl-content-block__title {
+        font-size: 32px;
+    }
+    .pl-content-block__description{
+        br{
+            display: none;
+        }
+    }
+    .pl-content-block {
+        gap: 16px;
+    }
+    .pl-border-block{
+    .timer-block,
+    .timer-block__bar {
+        width: 110px;
+        height: 47px;
+    }
+    
+}
+    .pl-border-block__best-price {
+        font-size: 18px;
+    }
+    .pl-border-block__after-price,
+    .pl-border-block__across-price {
+        font-size: 16px;
+    }
+    .pl-border-block{
+        .timer-block{
+            .timer {
+                padding-top: 10px;
+            }
+        }
+    }
+    .pl-popup-overlay {
+        padding: 12px;
+        .pl-popup__submit-button {
+            width: 100%;
+        }
+        .pl-popup {
+            min-width: 100%;
+            width: 100%;
+            flex:1;
+            .dividers-block__divider{
+                width: 120px;
+            }
+            .card-values {
+                margin: 20px 16px 25px;
+                &__cvv,
+                &__months,
+                &__years {
+                    max-width: 80px;
+                }
+            }
+        }
+    }
+}

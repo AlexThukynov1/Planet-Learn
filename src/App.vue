@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="bg">
+    <div class="content">
+      <header class="logo">
+            <img :src="logoImage" class="logo__image" alt="Learn planet logo">
+        </header>
+      <pl-main-wrapper></pl-main-wrapper>
+    </div>
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import plMainWrapper from './components/pl-main-wrapper.vue';
+import logoImage from './assets/media/images/logo-min.png'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    plMainWrapper,
+  },
+  data() {
+    return {
+      logoImage
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  
 </style>
